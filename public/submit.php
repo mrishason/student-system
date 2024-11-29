@@ -1,7 +1,6 @@
 <?php
 include('../config/db_conn.php');
 
-// Validate and insert data
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $firstname = $_POST['firstname'];
     $lastname = $_POST['lastname'];
