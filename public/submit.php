@@ -11,14 +11,14 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $phone = $_POST['phone'];
     $email = $_POST['email'];
 
-    $sql = "INSERT INTO students (firstname, lastname, gender, date_of_birth, address, phone_number, email)
+    $sql = "INSERT INTO student (firstname, lastname, gender, date_of_birth, address, phone_number, email)
             VALUES ('$firstname', '$lastname', '$gender', '$dob', '$address', '$phone', '$email')";
 
-    if ($conn->query($sql) === TRUE) {
-        echo "New student record created successfully.";
-    } else {
-        echo "Error: " . $sql . "<br>" . $conn->error;
-    }
+if ($conn->query($sql) === TRUE) {
+    header("Location:students.php");
+} else {
+    echo "Error: " . $sql . "<br>" . $conn->error;
+}
 }
 
 $conn->close();

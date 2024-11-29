@@ -1,7 +1,7 @@
 <?php
 include('../config/db_conn.php');
 
-$result = $conn->query("SELECT * FROM students");
+$result = $conn->query("SELECT * FROM student");
 
 $students = [];
 while ($row = $result->fetch_assoc()) {
@@ -17,6 +17,7 @@ $conn->close();
 <table id="studentTable" class="display">
     <thead>
         <tr>
+            <th>No.</th>
             <th>First Name</th>
             <th>Last Name</th>
             <th>Gender</th>
@@ -29,6 +30,7 @@ $conn->close();
     <tbody>
         <?php foreach ($students as $student): ?>
             <tr>
+                <td><?= $student['id']?></td>
                 <td><?= $student['firstname'] ?></td>
                 <td><?= $student['lastname'] ?></td>
                 <td><?= $student['gender'] ?></td>

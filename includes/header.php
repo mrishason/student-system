@@ -11,7 +11,7 @@
 </head>
 <body>
     <header>
-        <h1>Student Registration System</h1>
+        <h1>Student Registration Form</h1>
     </header>
 </body>
 </html>

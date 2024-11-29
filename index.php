@@ -1,7 +1,5 @@
-<?php include('../includes/header.php'); ?>
-
-<h2>Student Registration</h2>
-<form action="submit.php" method="POST">
+<?php include('./includes/header.php'); ?>
+<form action="./public/submit.php" method="POST">
     <label for="firstname">First Name:</label>
     <input type="text" id="firstname" name="firstname" required><br><br>
     
@@ -29,4 +27,4 @@
     <input type="submit" value="Submit">
 </form>
 
-<?php include('../includes/footer.php'); ?>
+<?php include('./includes/footer.php'); ?>
